@@ -13,3 +13,4 @@ plugins {
 }
 
 includeBuild("lessons")
+includeBuild("task-manager")
