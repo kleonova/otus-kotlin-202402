@@ -1,8 +1,8 @@
 plugins {
-    kotlin("jvm") apply false
+    kotlin("jvm")
 }
 
-group = "ru.lev.otuskotlin"
+group = "ru.lev.otuskotlin.lessons"
 version = "1.0-SNAPSHOT"
 
 allprojects {
