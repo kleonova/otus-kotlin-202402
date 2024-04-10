@@ -1,5 +1,5 @@
-import kotlin.test.Ignore
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 /*
 * Реализовать функцию, которая преобразует список словарей строк в ФИО
@@ -11,7 +11,6 @@ import kotlin.test.Test
 class HomeWork1Test {
 
     @Test
-    @Ignore
     fun mapListToNamesTest() {
         val input = listOf(
             mapOf(
@@ -32,7 +31,14 @@ class HomeWork1Test {
             "Петька",
             "Королев Сергей",
         )
-//        val res = mapListToNames(input)
-//        assertEquals(expected, res)
+
+        val res = mapListToNames(input)
+        assertEquals(expected, res)
+    }
+
+    private fun mapListToNames(input: List<Map<String, String>>): List<String> {
+        fun getName(first: String? = "", middle: String? = "", last: String? = ""): String = "$last $first $middle".trim()
+
+        return input.map { item -> getName(first = item["first"]?:"", middle = item["middle"]?:"", last = item["last"]?:"") }
     }
 }
