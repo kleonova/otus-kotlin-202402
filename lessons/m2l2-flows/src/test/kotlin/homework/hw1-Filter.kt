@@ -1,9 +1,8 @@
-import kotlinx.coroutines.flow.asFlow
-import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.runBlocking
 import java.math.BigDecimal
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 /**
  * Задание.
@@ -22,10 +21,16 @@ class Exercise1Filter {
         )
         val res = LIST
             .asFlow()
-            .run { flt.title?.let { t -> this.filter { it.title == t } } ?: this }
+//            .run { flt.title?.let { t -> this.filter { it.title == t } } ?: this }
+            .filter { it.title == flt.title }
+            .filter { it.type == flt.type  }
+            .filter { flt.visibilitiesOr?.contains(it.visibility) ?: false }
+            .filter { it.price >= flt.priceMin }
+            .onEach { println(it) }
             .toList()
-//        assertEquals(1, res.size)
-//        assertEquals("5", res.first().id)
+
+        assertEquals(2, res.size)
+        assertEquals("5", res.first().id)
     }
 
     companion object {
