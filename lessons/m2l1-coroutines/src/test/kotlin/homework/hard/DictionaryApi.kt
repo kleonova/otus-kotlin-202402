@@ -1,6 +1,10 @@
+package homework.hard
+
+import DICTIONARY_API
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import homework.hard.dto.Dictionary
 import okhttp3.Response
 
 class DictionaryApi(

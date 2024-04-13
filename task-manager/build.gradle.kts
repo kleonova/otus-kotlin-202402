@@ -15,3 +15,7 @@ subprojects {
     group = rootProject.group
     version = rootProject.version
 }
+
+dependencies {
+    testImplementation(kotlin("test-junit"))
+}
