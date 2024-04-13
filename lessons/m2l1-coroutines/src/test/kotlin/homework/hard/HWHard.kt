@@ -1,5 +1,9 @@
 package homework.hard
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.runBlocking
 import java.io.File
 import kotlin.test.Test
 
@@ -10,6 +14,16 @@ class HWHard {
         val words = FileReader.readFile().split(" ", "\n").toSet()
 
         val dictionaries = findWords(dictionaryApi, words, Locale.EN)
+
+        var countDef = 0
+        dictionaries.filterNotNull().forEach{
+            it.meanings.forEach{ meaning ->
+                countDef += meaning.definitions.count()
+            }
+        }
+
+        println("count words = ${words.size}")
+        println("count definitions = $countDef")
 
         dictionaries.filterNotNull().map { dictionary ->
             print("For word ${dictionary.word} i found examples: ")
@@ -30,11 +44,12 @@ class HWHard {
         dictionaryApi: DictionaryApi,
         words: Set<String>,
         @Suppress("SameParameterValue") locale: Locale
-    ) =
-        // make some suspensions and async
+    ) = runBlocking(Dispatchers.IO) {
         words.map {
-            dictionaryApi.findWord(locale, it)
-        }
+            async { dictionaryApi.findWord(locale, it) }
+        }.awaitAll()
+    }
+
 
     object FileReader {
         fun readFile(): String =
