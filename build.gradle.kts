@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
+    kotlin("jvm") version libs.versions.kotlin.get()
 }
 
 group = "ru.lev.otuskotlin"
@@ -14,13 +14,4 @@ allprojects {
 subprojects {
     group = rootProject.group
     version = rootProject.version
-}
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-}
-repositories {
-    mavenCentral()
-}
-kotlin {
-    jvmToolchain(8)
 }

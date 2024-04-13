@@ -1,13 +1,10 @@
 plugins {
-    kotlin("jvm")
+    kotlin("jvm") version libs.versions.kotlin.get()
 }
-
-val coroutinesVersion: String by project
-val jUnitJupiterVersion: String by project
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
-
     testImplementation(kotlin("test-junit"))
+
+    implementation(libs.kotlinx.coroutines)
 }

@@ -1,16 +1,14 @@
 plugins {
-    kotlin("jvm")
+    kotlin("jvm") version libs.versions.kotlin.get()
 }
-
-val coroutinesVersion: String by project
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+    testImplementation(kotlin("test-junit"))
+
+    implementation(libs.kotlinx.coroutines)
 
     // Homework Hard
-    implementation("com.squareup.okhttp3:okhttp:4.12.0") // http client
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.1") // from string to object
-
-    testImplementation(kotlin("test-junit"))
+    implementation(libs.jackson.kotlin) // from string to object
+    implementation(libs.okhttp) // http client
 }

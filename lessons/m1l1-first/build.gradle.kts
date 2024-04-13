@@ -5,7 +5,3 @@ plugins {
 dependencies {
     testImplementation(kotlin("test-junit"))
 }
-
-kotlin {
-    jvmToolchain(21)
-}

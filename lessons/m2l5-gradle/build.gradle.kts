@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.internal.ensureParentDirsCreated
 
 plugins {
-    kotlin("jvm")
+    kotlin("jvm") version libs.versions.kotlin.get()
 }
 
 repositories {

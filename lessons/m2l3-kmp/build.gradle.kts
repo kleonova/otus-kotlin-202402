@@ -1,11 +1,7 @@
 plugins {
-    kotlin("jvm")
+    kotlin("jvm") version libs.versions.kotlin.get()
 }
 
 dependencies {
     testImplementation(kotlin("test-junit"))
-}
-
-kotlin {
-    jvmToolchain(21)
 }

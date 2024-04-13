@@ -1,9 +1,9 @@
 rootProject.name = "task-manager"
 
-pluginManagement {
-    val kotlinVersion: String by settings
-
-    plugins {
-        kotlin("jvm") version kotlinVersion
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
     }
 }

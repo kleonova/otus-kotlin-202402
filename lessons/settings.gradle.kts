@@ -1,10 +1,16 @@
 rootProject.name = "lessons"
 
-pluginManagement {
-    val kotlinVersion: String by settings
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
 
+pluginManagement {
     plugins {
-        kotlin("jvm") version kotlinVersion
+        kotlin("jvm")
     }
 }
 
