@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version libs.versions.kotlin.get()
+    id("build-jvm")
 }
 
 group = "ru.lev.otuskotlin.taskmanager"

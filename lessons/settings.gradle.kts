@@ -9,10 +9,13 @@ dependencyResolutionManagement {
 }
 
 pluginManagement {
+    includeBuild("../build-plugin")
     plugins {
         kotlin("jvm")
+        id("build-jvm") apply false
+        id("build-kmp") apply false
     }
-}
+ }
 
 include("m1l1-first")
 include("m1l2-basic")

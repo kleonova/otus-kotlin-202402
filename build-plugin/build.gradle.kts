@@ -2,18 +2,15 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "ru.lev.otuskotlin.buildplugin"
-version = "1.0-SNAPSHOT"
-
 gradlePlugin {
     plugins {
         register("build-jvm") {
             id = "build-jvm"
-            implementationClass = "ru.lev.otuskotlin.buildplugin.BuildPluginJvm"
+            implementationClass = "BuildPluginJvm"
         }
         register("build-kmp") {
             id = "build-kmp"
-            implementationClass = "ru.lev.otuskotlin.buildplugin.BuildPluginMultiplatform"
+            implementationClass = "BuildPluginMultiplatform"
         }
     }
 }
@@ -23,6 +20,9 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin")
+    // для подключения toml (немного магии)
+    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
+    implementation(libs.plugin.kotlin)
+    implementation(libs.plugin.binaryCompatibilityValidator)
 }
 
