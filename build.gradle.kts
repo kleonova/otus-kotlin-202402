@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version libs.versions.kotlin.get()
+    alias(libs.plugins.kotlin.jvm) apply false
+    alias(libs.plugins.kotlin.multiplatform) apply false
 }
 
 group = "ru.lev.otuskotlin"

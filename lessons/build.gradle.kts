@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version libs.versions.kotlin.get()
+    alias(libs.plugins.kotlin.jvm)
 }
 
 group = "ru.lev.otuskotlin.lessons"
