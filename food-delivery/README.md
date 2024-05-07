@@ -17,7 +17,7 @@ Food Delivery - сервис доставки еды из ресторана.
    3. [Жизненный цикл заказа](docs/02-analytics/03-order-lifecycle.svg)
    4. [Статусы заказа](./docs/02-analytics/04-order-statuses.svg) 
 3. DevOps
-   1. [Файлы сборки]()
+   1. [Файлы сборки](docker-compose.yml)
 4. Архитектура
    1. [Архитектура](./docs/03-architecture/01-architecture.svg) 
    2. [Architecture decision records](./docs/03-architecture/02-adrs.md)
