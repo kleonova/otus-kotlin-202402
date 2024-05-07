@@ -5,6 +5,9 @@ pluginManagement {
         kotlin("jvm")
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
+}
 
 includeBuild("lessons")
-includeBuild("task-manager")
+includeBuild("food-delivery")

@@ -1,8 +1,9 @@
 # Учебный проект Task Manager
 
 ## Описание
+
 Task manager - инструмент, который помогает организовать и управлять задачами в повседневной жизни или работе. 
-Требования 
+
 
 ## Документация
 
@@ -16,13 +17,17 @@ Task manager - инструмент, который помогает орган�
 3. DevOps
     1. [Файлы сборки]()
 4. Архитектура
-    1. [ADR](docs/03-architecture/01-adrs.md)
-    2. [Описание API](docs/03-architecture/02-api.md)
-    3. [Проектирование](docs/03-architecture/03-design.md)
-    4. [Описание базы данных](docs/03-architecture/04-database.md)
-    5. [Описание MVP](docs/03-architecture/05-mvp.md)
+    1. [ER-диаграмма]()
+    2. [ADR](docs/03-architecture/01-adrs.md)
+    3. [Описание API](docs/03-architecture/02-api.md)
+    4. [Проектирование](docs/03-architecture/03-design.md)
+    5. [Описание базы данных](docs/03-architecture/04-database.md)
 5. Тесты
+6. MVP
+   1. [Sprint #1](docs/06-mvp/01-sprint.md)
+
 
 ## Визуальная схема фронтенда
+[Макет в figma](https://www.figma.com/file/OoW29H8bvEyYSH9v4N4xZl/Project-Management-Dashboard-(Community)?type=design&node-id=0%3A1&mode=design&t=0P2mqnyMewdnjG5G-1)
 
-![Макет фронта]()
+![Макет веб-интерфейса](docs/frontend_model.jpg)

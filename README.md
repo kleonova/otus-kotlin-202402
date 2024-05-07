@@ -4,4 +4,4 @@
 ### Подпроекты:
 - lessons - учебные модули
 - build-plugin - плагин для сборки проекта
-- task-manager - учебный самостоятельный проект, [описание](task-manager/README.md) 
+- food-delivery - учебный самостоятельный проект, [описание](food-delivery/README.md) 
