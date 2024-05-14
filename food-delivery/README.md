@@ -23,7 +23,6 @@ Food Delivery - сервис доставки еды из ресторана.
    2. [Architecture decision records](./docs/03-architecture/02-adrs.md)
    3. [Описание API](./docs/03-architecture/03-api.md)
    4. [Диаграмма сущностей](./docs/03-architecture/03-er-diagramm.svg)
-   5. [Схема базы данных](./docs/03-architecture/04-database.svg)
 5. Тесты
 6. MVP
    1. [Sprint #1](docs/06-mvp/01-sprint.md)
