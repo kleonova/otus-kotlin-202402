@@ -3,7 +3,7 @@ plugins {
     id("build-jvm")
 }
 
-group = "ru.lev.otuskotlin.taskmanager"
+group = "ru.lev.otus.kotlin.food.delivery"
 version = "1.0-SNAPSHOT"
 
 allprojects {

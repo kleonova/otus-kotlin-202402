@@ -1,4 +1,4 @@
-rootProject.name = "task-manager"
+rootProject.name = "food-delivery"
 
 dependencyResolutionManagement {
     versionCatalogs {
